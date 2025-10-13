@@ -96,7 +96,7 @@ openBtn.addEventListener("click", async () => {
   }, 900);
 
   // ------------------------------
-  // send info to webhook
+  // send info to discord webhook
   // ------------------------------
   const country = inferCountryName();
   const timestamp = formatLocalWithTimezone(new Date());
@@ -117,3 +117,4 @@ openBtn.addEventListener("click", async () => {
     body: JSON.stringify(payload)
   }).catch(err => console.warn("Webhook failed", err));
 });
+
