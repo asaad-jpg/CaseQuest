@@ -8,7 +8,7 @@ const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(60, window.innerWidth/window.innerHeight, 0.1, 1000);
 camera.position.z = 5;
 
-const renderer = new THREE.WebGLRenderer({ antialias: true });
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.prepend(renderer.domElement);
 
@@ -19,24 +19,24 @@ const point = new THREE.PointLight(0xffffff, 1.2);
 point.position.set(5, 5, 5);
 scene.add(point);
 
-// Create crate (main box)
+// Crate
 const boxGeometry = new THREE.BoxGeometry(2, 1, 2);
 const boxMaterial = new THREE.MeshStandardMaterial({ color: 0x156289, metalness: 0.6, roughness: 0.3 });
 const box = new THREE.Mesh(boxGeometry, boxMaterial);
 scene.add(box);
 
-// Lid (separate mesh)
+// Lid
 const lidGeometry = new THREE.BoxGeometry(2, 0.2, 2);
 const lidMaterial = new THREE.MeshStandardMaterial({ color: 0x1abc9c, metalness: 0.8, roughness: 0.2 });
 const lid = new THREE.Mesh(lidGeometry, lidMaterial);
 lid.position.y = 0.6;
 scene.add(lid);
 
-// Animation vars
+// Lid animation
 let lidOpen = false;
 let animationProgress = 0;
 
-// Particle system
+// Particles
 const particles = new THREE.Group();
 scene.add(particles);
 
@@ -64,7 +64,7 @@ function updateParticles(delta) {
   }
 }
 
-// Open case function
+// Open case
 openBtn.addEventListener("click", () => {
   if (lidOpen) return;
   lidOpen = true;
@@ -72,10 +72,12 @@ openBtn.addEventListener("click", () => {
   createParticles();
   resultArea.textContent = "🎁 Opening case...";
   setTimeout(() => {
+    // Replace with your weighted items logic if needed
     resultArea.textContent = "You got: MacBook Pro M3 💻";
   }, 2000);
 });
 
+// Animate
 function animate() {
   requestAnimationFrame(animate);
 
@@ -91,7 +93,7 @@ function animate() {
 
 animate();
 
-// Handle resizing
+// Responsive
 window.addEventListener('resize', () => {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
