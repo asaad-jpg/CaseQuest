@@ -1,0 +1,85 @@
+:root{
+  --bg1:#07060a;
+  --bg2:#0f1116;
+  --accent:#ffb86b;
+  --muted:#9aa1ad;
+  --glass: rgba(255,255,255,0.03);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,Arial;color:#e6eef6;background:linear-gradient(180deg,var(--bg1),var(--bg2));-webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
+
+/* -------------------- Top Bar -------------------- */
+.topbar{height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-bottom:1px solid rgba(255,255,255,0.03)}
+.brand{font-weight:800;letter-spacing:0.6px}
+.meta{display:flex;gap:12px;align-items:center}
+.country{font-size:13px;color:var(--muted);padding:6px 10px;background:var(--glass);border-radius:8px}
+
+/* -------------------- Main Layout -------------------- */
+.main{display:flex;gap:24px;align-items:flex-start;padding:26px;max-width:1200px;margin:0 auto;width:100%}
+.canvas-wrap{width:720px;height:450px;border-radius:14px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));box-shadow:0 8px 40px rgba(2,6,23,0.6);overflow:hidden;position:relative}
+.controls{display:flex;flex-direction:column;gap:12px;align-items:center;width:220px}
+.btn-primary{width:220px;padding:14px 18px;border-radius:12px;border:0;background:linear-gradient(180deg,#ff9b4b,#ffb86b);color:#111;font-weight:800;cursor:pointer;box-shadow:0 12px 30px rgba(255,184,107,0.08)}
+.info{font-size:13px;color:var(--muted);margin-top:6px;text-align:center}
+
+/* -------------------- Result Area (Cases) -------------------- */
+.result-area{width:320px;min-height:260px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:14px;border:1px solid rgba(255,255,255,0.03);display:flex;flex-direction:column;align-items:center;justify-content:flex-start}
+.placeholder{color:var(--muted);margin-top:40px}
+.won-item{display:flex;flex-direction:column;align-items:center;gap:8px;animation:fadeIn .45s ease both}
+.won-item img{width:240px;height:140px;object-fit:cover;border-radius:10px;box-shadow:0 18px 50px rgba(0,0,0,0.6)}
+.item-name{font-weight:800}
+.item-value{color:var(--accent);font-weight:700;background:rgba(255,184,107,0.06);padding:6px 10px;border-radius:8px}
+
+/* -------------------- Menu Buttons -------------------- */
+.menu{ text-align:center; padding:40px; }
+.menu h1{ font-size:3rem; color:#f7d13f; margin-bottom:10px; }
+.menu p{ color:#ccc; margin-bottom:30px; }
+.menu-buttons{ display:flex; flex-wrap:wrap; justify-content:center; gap:15px; }
+.game-btn{ text-decoration:none; color:white; padding:15px 30px; border-radius:12px; background:linear-gradient(145deg, #292c31, #1e1f24); border:1px solid rgba(255,255,255,0.08); transition:0.3s; font-weight:bold; }
+.game-btn:hover{ background:linear-gradient(145deg, #ffd166, #f2b705); color:#111; transform:scale(1.05); }
+footer{ margin-top:50px; opacity:0.6; }
+
+/* -------------------- Blackjack -------------------- */
+.blackjack-table{
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+  align-items:center;
+  margin:20px 0;
+}
+.hand{
+  display:flex;
+  gap:12px;
+}
+.card{
+  width:80px;
+  height:120px;
+  border-radius:10px;
+  background-size:cover;
+  background-position:center;
+  box-shadow:0 6px 18px rgba(0,0,0,0.5);
+}
+.blackjack-controls{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  margin:12px 0;
+}
+.blackjack-result{
+  text-align:center;
+  font-weight:bold;
+  margin-top:12px;
+  font-size:1.2rem;
+  color:var(--accent);
+}
+
+/* -------------------- Responsive -------------------- */
+@media (max-width:1000px){
+  .main{flex-direction:column;align-items:center}
+  .canvas-wrap{width:92vw;height:54vh}
+  .controls{flex-direction:row;width:92vw;justify-content:center}
+  .result-area{width:92vw;margin-top:12px}
+}
+
+/* -------------------- Animations -------------------- */
+@keyframes fadeIn { from{opacity:0; transform:translateY(6px)} to{opacity:1; transform:none} }

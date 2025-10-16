@@ -1,0 +1,119 @@
+body {
+  background: #121417;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.coinflip-container {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #ffd166;
+}
+
+.choices {
+  margin-bottom: 20px;
+}
+
+.choice {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.gold {
+  background: linear-gradient(145deg, #ffd166, #f2b705);
+  color: #111;
+}
+
+.purple {
+  background: linear-gradient(145deg, #b36bff, #7e22ce);
+  color: white;
+}
+
+.choice:hover {
+  transform: scale(1.05);
+}
+
+button.selected {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+}
+
+.coin {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  margin: 40px auto;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+  transition: transform 2s cubic-bezier(.36,.07,.19,.97);
+}
+
+.face {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  backface-visibility: hidden;
+  font-size: 1.1rem;
+  box-shadow: 0 0 25px rgba(0,0,0,0.6);
+}
+
+.front.gold {
+  background: radial-gradient(circle at center, #ffd166, #b58b00);
+  color: #111;
+}
+
+.back.purple {
+  background: radial-gradient(circle at center, #a855f7, #5b21b6);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.flip {
+  padding: 12px 35px;
+  background: #00e676;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.flip:hover {
+  background: #00c86b;
+  transform: scale(1.05);
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+
+.back-btn {
+  position: absolute;
+  bottom: 30px;
+  color: #ccc;
+  text-decoration: none;
+  font-size: 1rem;
+}

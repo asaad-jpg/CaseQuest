@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keno - CaseQuest</title>
+  <link rel="stylesheet" href="keno.css" />
+</head>
+<body>
+  <div class="keno-container">
+    <h1>🎯 Keno</h1>
+
+    <div class="risk-select">
+      <label>Risk Level:</label>
+      <select id="risk">
+        <option value="low">Low</option>
+        <option value="medium" selected>Medium</option>
+        <option value="high">High</option>
+      </select>
+    </div>
+
+    <div class="board" id="board"></div>
+
+    <button id="playBtn">Play</button>
+
+    <div id="results"></div>
+
+    <a href="../../index.html" class="back-btn">← Back</a>
+  </div>
+
+  <script src="keno.js"></script>
+</body>
+</html>

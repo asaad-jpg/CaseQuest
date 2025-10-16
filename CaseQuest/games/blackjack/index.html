@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blackjack — CaseQuest</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Balance Bar -->
+  <div id="balanceBar"></div>
+
+  <!-- Top Bar -->
+  <div class="topbar">
+    <div class="brand">CaseQuest Blackjack</div>
+    <div class="meta">
+      <div class="country">🎴 </div>
+    </div>
+  </div>
+
+  <!-- Main Table -->
+  <div class="main">
+    <div class="blackjack-table">
+      <!-- Dealer Area -->
+      <div class="dealer-area">
+        <h2>Dealer</h2>
+        <div id="dealerRow" class="cards"></div>
+        <div id="dealerCount" class="total">Dealer: ?</div>
+      </div>
+
+      <!-- Player Area -->
+      <div class="player-area">
+        <h2>You</h2>
+        <div id="playerRow" class="cards"></div>
+        <div id="playerCount" class="total">Player: 0</div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <!-- Bet Chips -->
+      <div id="chips" class="chips">
+        <button class="chip" data-amount="100">$100</button>
+        <button class="chip" data-amount="1000">$1K</button>
+        <button class="chip" data-amount="5000">$5K</button>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="buttons">
+        <button id="dealBtn">🎯 Deal</button>
+        <button id="hitBtn">✋ Hit</button>
+        <button id="standBtn">🧍 Stand</button>
+        <button id="doubleBtn">💰 Double</button>
+        <button id="splitBtn">🪓 Split</button>
+        <button id="insuranceBtn">🛡️ Insurance</button>
+      </div>
+
+      <!-- Bet Input / Quick Adjust -->
+      <div class="bet-controls">
+        <input id="betInput" type="number" placeholder="Enter Bet" min="1" />
+        <button id="halfBtn">½</button>
+        <button id="doubleChipBtn">x2</button>
+      </div>
+
+      <!-- Result Message -->
+      <p id="result" class="message"></p>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="../../balance.js"></script>
+  <script src="blackjack.js"></script>
+</body>
+</html>

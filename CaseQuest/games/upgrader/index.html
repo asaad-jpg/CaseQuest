@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upgrader - CaseQuest</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="game-container">
+    <h1>🔼 Upgrader</h1>
+    <p>Place your bet and try to upgrade your amount!</p>
+
+    <div class="balance-container">Balance: $<span id="balanceDisplay"></span></div>
+
+    <input type="number" id="betAmount" placeholder="Enter bet amount" />
+    <button id="spinBtn">Spin</button>
+
+    <div class="wheel-container">
+      <div class="wheel" id="wheel">
+        <div class="arrow"></div>
+      </div>
+    </div>
+
+    <div id="result"></div>
+
+    <a href="../../index.html" class="back-btn">← Back</a>
+  </div>
+
+  <script src="../../balance.js"></script>
+  <script src="upgrader.js"></script>
+</body>
+</html>

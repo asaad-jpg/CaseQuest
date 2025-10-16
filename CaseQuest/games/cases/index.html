@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>CaseQuest — V1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">CaseQuest</div>
+    <div class="meta">
+      <div id="detectedCountry" class="country">—</div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div id="canvasWrap" class="canvas-wrap"></div>
+
+    <div class="controls">
+      <button id="openBtn" class="btn-primary">OPEN CASE</button>
+      <div id="info" class="info">Try it — looks best on desktop</div>
+    </div>
+
+    <aside id="resultArea" class="result-area">
+      <div class="placeholder">No item opened yet</div>
+    </aside>
+  </main>
+
+  <footer class="footer">Made by you — solo dev</footer>
+
+  <!-- Three.js standard build  -->
+  <script src="https://unpkg.com/three@0.158.0/build/three.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
