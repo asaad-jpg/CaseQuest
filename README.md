@@ -1,30 +1,35 @@
-# CaseQuest V1
-V1 – Patch Notes
+CaseQuest — Patch Notes V2
 
-By A-Breeze, Solo Developer
+Version: 2.0
 
-Release Date: October 2025
+🆕 New Features
 
-Features & Updates
+Coinflip Mini-Game: Quick, high-stakes flips with adjustable bets.
 
-3D Case Opening: Fully interactive 3D crate with smooth lid animation.
+Keno: Risk-based number draw game with multipliers and dynamic payouts.
 
-Dynamic Particles: Visual particle effects when opening a case for extra flair.
+Blackjack: Casino-style blackjack added with realistic rules, animations, and balance management.
 
-Prize Reveal: Clear, animated display of rewards after opening a case.
+Upgrader: A new upgrade system to enhance rewards and gameplay mechanics. ( Not Working Yet: Fixing )
 
-Weighted Rewards System: Rare and common items are now balanced using weighted probabilities.
+✨ Improvements
 
-Responsive Design: Works across desktop and mobile browsers.
+Improved overall UI aesthetics and animations to match the “Case Opening” style.
 
-Optimized Performance: Lightweight 3D models and animations for smooth experience.
+Unified design across all game modes for a more immersive experience.
 
-Customizable UI: Modern and simple interface for easy interaction.
+Enhanced balance system and quick bet controls for better player flow.
 
-Notes from the Developer:
+🐛 Fixes
 
-All features were built from scratch as a solo developer.
+Fixed several layout and rendering issues in previous version.
 
-Focus was on creating a smooth and visually engaging experience.
+Optimized card and case animations to reduce visual glitches.
 
-Feedback is always welcome as I continue refining the project.
+Resolved issues with balance display across different game modes.
+
+🔧 Notes
+
+All game modes now operate in separate modular files for easier maintenance.
+
+Preparations made for future expansions: more mini-games, cases, and gameplay features.
